@@ -1,6 +1,6 @@
 <?php
 header("Content-type: text/xml');
-echo '<?xml  version="1.0" encoding="UTF-8" standalone="yes" ?>	
+echo '<?xml  version="1.0" encoding="UTF-8" standalone="yes" ?>';
 
 echo '<response>';
 	# $food is what we are passed by AJAX
@@ -11,7 +11,7 @@ echo '<response>';
 	if (in_array($food, $foodArray)) {
 		echo 'We do have ' . $food. '!';
 	elseif($food == "") {
-		echo 'Echo a food you putz';
+		echo 'Enter a food you putz';
 	} else {
 		echo 'Sorry punk we don't see no '.$food.'!';
 	}
