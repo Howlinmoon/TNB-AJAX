@@ -51,6 +51,7 @@ function handleServerResponse() {
 	console.log("handleServerResponse()  readyState = "+xmlHttp.readyState);
 	if (xmlHttp.readyState == 4) {
 		// check the HTTP status
+		console.log('xmlHttp = '+xmlHttp);
 		if (xmlHttp.status == 200) {
 			// 200 is good
 			var xmlResponse = xmlHttp.responseXML;
