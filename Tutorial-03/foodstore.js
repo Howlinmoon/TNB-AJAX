@@ -28,6 +28,7 @@ function createXmlHttpRequestObject() {
 }
 
 function process() {
+	console.log("process() xmlHttp.readyState = "+xmlHttp.readyState);
 	if (xmlHttp.readyState == 0 || xmlHttp.readyState == 4) {
 		// the object is not busy and is able to communicate with the server
 		// then we grab the food
@@ -47,6 +48,7 @@ function process() {
 
 function handleServerResponse() {
 	// state #4, response is ready
+	console.log("handleServerResponse()  readyState = "+xmlHttp.readyState);
 	if (xmlHttp.readyState == 4) {
 		// check the HTTP status
 		if (xmlHttp.status == 200) {
