@@ -33,10 +33,13 @@ function process() {
 		// the object is not busy and is able to communicate with the server
 		// then we grab the food
 		var food = encodeURIComponent(document.getElementById("userInput").value);
-		// create our request
-		xmlHttp.open("GET", "foodstore.php");
-		
+		// create our request - assume foodstore.php is at www.bifftech.com/AJAXTest1/foodstore.php
+		xmlHttp.open("GET", "http://www.bifftech.com/AJAXTest1/foodstore.php?food="+food, true);
+		xmlHttp.onreadystatechange = handleServerResponse;
+		// parameter is non-null for POST, but is null for GET
+		xmlHttp.send(null);
 	} else {
+		setTimeout('process()', 1000);
 		
 	}
 	
