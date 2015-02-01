@@ -58,7 +58,7 @@ function handleServerResponse() {
 			// this sends an xml request every second
 			setTimeout('process()', 1000);
 		} else {
-			alert("Something went wrong receiving the response!");
+			console.log("xmlHttp.readyStatus = "+xmlHttp.readyStatus);
 		}
 	}
 }
