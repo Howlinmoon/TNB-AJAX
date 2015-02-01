@@ -26,3 +26,19 @@ function createXmlHttpRequestObject() {
 	
 	return xmlHttp;
 }
+
+function process() {
+	
+	if (xmlHttp.readyState== 0 || xmlHttp.readyState == 4) {
+		// the object is not busy and is able to communicate with the server
+		// then we grab the food
+		var food = encodeURIComponent(document.getElementById("userInput").value);
+		// create our request
+		xmlHttp.open("GET", "foodstore.php");
+		
+	} else {
+		
+	}
+	
+	
+}
