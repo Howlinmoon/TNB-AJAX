@@ -10,7 +10,7 @@ echo '<response>';
 	# checking to see if the requested food item matches the contents of our array
 	if (in_array($food, $foodArray)) {
 		echo 'We do have ' . $food. '!';
-	elseif($food == "") {
+	} elseif($food == "") {
 		echo 'Enter a food you putz';
 	} else {
 		echo 'Sorry punk we don't see no '.$food.'!';
