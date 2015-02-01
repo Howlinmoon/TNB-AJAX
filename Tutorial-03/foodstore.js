@@ -49,7 +49,7 @@ function handleServerResponse() {
 	// state #4, response is ready
 	if (xmlHttp.readyState == 4) {
 		// check the HTTP status
-		if (xmlHttp.readyStatus == 200) {
+		if (xmlHttp.status == 200) {
 			// 200 is good
 			var xmlResponse = xmlHttp.responseXML;
 			var xmlDocumentElement = xmlResponse.documentElement;
@@ -58,7 +58,7 @@ function handleServerResponse() {
 			// this sends an xml request every second
 			setTimeout('process()', 1000);
 		} else {
-			console.log("xmlHttp.readyStatus = "+xmlHttp.readyStatus);
+			console.log("xmlHttp.status = "+xmlHttp.status);
 		}
 	}
 }
