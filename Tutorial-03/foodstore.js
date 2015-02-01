@@ -35,7 +35,7 @@ function process() {
 		// create our request - assume foodstore.php is at
 		// www.bifftech.com/AJAXTest1/foodstore.php
 		xmlHttp.open("GET",
-				"http://www.bifftech.com/AJAXTest1/foodstore.php?food=" + food,
+				"http://www.bifftech.com//bifftech.com/TNB-AJAX/Tutorial-03/foodstore.php?food=" + food,
 				true);
 		xmlHttp.onreadystatechange = handleServerResponse;
 		// parameter is non-null for POST, but is null for GET
