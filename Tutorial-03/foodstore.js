@@ -54,7 +54,11 @@ function andleServerResponse() {
 			var xmlResponse = xmlHttp.responseXML;
 			var xmlDocumentElement = xmlResponse.documentElement;
 			var message = xmlDocumentElement.firstChild.data;
-			document.getElementById("underInput").innerHTML = 
+			document.getElementById("underInput").innerHTML = '<span style="color:blue">' + message + '</span>';
+			// this sends an xml request every second
+			setTimeout('process()', 1000);
+		} else {
+			alert("Something went wrong receiving the response!");
 		}
 	}
 }
