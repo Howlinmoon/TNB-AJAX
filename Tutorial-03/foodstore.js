@@ -45,7 +45,7 @@ function process() {
 	}
 }
 
-function andleServerResponse() {
+function handleServerResponse() {
 	// state #4, response is ready
 	if (xmlHttp.readyState == 4) {
 		// check the HTTP status
