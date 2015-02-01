@@ -54,6 +54,7 @@ function handleServerResponse() {
 		if (xmlHttp.status == 200) {
 			// 200 is good
 			var xmlResponse = xmlHttp.responseXML;
+			console.log('xmlResponse = '+xmlResponse);
 			var xmlDocumentElement = xmlResponse.documentElement;
 			var message = xmlDocumentElement.firstChild.data;
 			document.getElementById("underInput").innerHTML = '<span style="color:blue">' + message + '</span>';
