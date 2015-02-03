@@ -19,4 +19,8 @@ function gametime()  {
 	list.appendChild(item2);
 	list.appendChild(item3);
 
+	var theD = document.getElementById("theD");
+	theD.appendChild(title);
+	theD.appendChild(list);
+	
 }
