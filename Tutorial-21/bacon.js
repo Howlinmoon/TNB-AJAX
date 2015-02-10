@@ -40,10 +40,16 @@ function handleServerResponse() {
 	} else if (xmlHttp.readyState == 4) {
 		// response is ready...
 		if (xmlHttp.status == 200) {
-			
+			try {
+				var text = xmlHttp.responseText;
+				theD.innerHTML += "Status 4: request is finished and response is ready <br/>";
+				theD.innerHTML += "Text Received: <b>"+text+"</b> <br/>";
+			} catch (e) {
+				alert (e.toString() );
+			}
 		} else {
-			// something went wrong
-			alert()
+			// something went wrong - display it
+			alert( xmlHttp.statusText );
 		}
 		
 		
