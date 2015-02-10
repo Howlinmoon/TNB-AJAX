@@ -37,3 +37,15 @@ function handleStateChange() {
 		}
 	}
 }
+
+// handle the response from the server
+function handleResponse() {
+	var xmlResponse =  xmlHttp.responseXML;
+	// root will be the root element (response)
+	var root = xmlResponse.documentElement;
+	var names = root.getElementsByTagName("name");
+	var ssns = root.getElementsByTagName("ssn");
+	
+	
+}
+
