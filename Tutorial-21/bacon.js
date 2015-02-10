@@ -17,7 +17,10 @@ function process() {
 	
 	if (xmlHttp) {
 		try {
-			xmlHttp.open("GET");
+			xmlHttp.open("GET", "bacon.txt", true);
+			xmlHttp.onreadystatechange = handleServerResponse;
+			// connects to the server
+			xmlHttp.send(null);
 		} catch (e) {
 			alert(e.toString());
 		}
