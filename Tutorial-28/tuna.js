@@ -23,3 +23,17 @@ function process() {
 	}
 }
 
+// handle the xml state change
+function handleStateChange() {
+	if (xmlHttp.readyState == 4) {
+		if (xmlHttp.status == 200) {
+			try {
+				handleResponse();
+			} catch (e) {
+				alert(e.toString());
+			}
+		} else {
+			alert("xmlStatus: "+xmlHttp.statusText);
+		}
+	}
+}
