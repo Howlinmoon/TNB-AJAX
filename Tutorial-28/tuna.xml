@@ -1,0 +1,22 @@
+<? xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<response>
+	<people>
+		<person>
+			<name>
+				John Wayne
+			</name>
+			<ssn>
+				123-34-5678
+			</ssn>
+		</person>
+		<person>
+			<name>
+				John Denver
+			</name>
+			<ssn>
+				001-22-3333
+			</ssn>
+		</person>
+		
+	</people>
+</response>
