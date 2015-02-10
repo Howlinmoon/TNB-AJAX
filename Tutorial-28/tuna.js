@@ -46,6 +46,12 @@ function handleResponse() {
 	var names = root.getElementsByTagName("name");
 	var ssns = root.getElementsByTagName("ssn");
 	
+	var stuff = "";
+	for( var i = 0; i < names.length; i++) {
+		stuff = names.item(i).firstChild.data + " - " + ssns.item(i).firstChild.data + "<br/>";
+	}
 	
+	var theD = document.getElementById("theD");
+	theD.innerHTTML = stuff;
 }
 
