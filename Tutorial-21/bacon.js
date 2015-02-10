@@ -27,3 +27,11 @@ function process() {
 	}
 	
 }
+
+function handleServerResponse() {
+	var theD = document.getElementById('theD');
+	if (xmlHttp.readyState == 1) {
+		// established a connection
+		theD.innerHTML += "Status 1: server connection established <br/>";
+	}
+}
