@@ -31,7 +31,23 @@ function process() {
 function handleServerResponse() {
 	var theD = document.getElementById('theD');
 	if (xmlHttp.readyState == 1) {
-		// established a connection
+		// established a connection (this will not display with Chrome)
 		theD.innerHTML += "Status 1: server connection established <br/>";
+	} else if (xmlHttp.readyState == 2) {
+		theD.innerHTML += "Status 2: server received the request <br/>";
+	} else if (xmlHttp.readyState == 3) {
+		theD.innerHTML += "Status 3: server is processing the request <br/>";
+	} else if (xmlHttp.readyState == 4) {
+		// response is ready...
+		if (xmlHttp.status == 200) {
+			
+		} else {
+			// something went wrong
+			alert()
+		}
+		
+		
+		
 	}
+	
 }
